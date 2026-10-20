@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline": "#76777d", "on-surface-variant": "#45464d", "on-primary-container": "#7c839b", "primary-fixed": "#dae2fd", "on-tertiary-fixed-variant": "#005236", "on-secondary-container": "#fffbff", "on-secondary-fixed-variant": "#2f2ebe", "on-error-container": "#93000a", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-lowest": "#ffffff", "surface-container-low": "#eff4ff", "surface": "#f8f9ff", "secondary": "#4648d4", "surface-tint": "#565e74", "secondary-fixed-dim": "#c0c1ff", "inverse-surface": "#213145", "error": "#ba1a1a", "inverse-on-surface": "#eaf1ff", "error-container": "#ffdad6", "on-tertiary-fixed": "#002113", "on-secondary-fixed": "#07006c", "primary": "#000000", "tertiary-container": "#002113", "secondary-container": "#6063ee", "tertiary-fixed": "#6ffbbe", "on-tertiary-container": "#009668", "on-primary": "#ffffff", "surface-variant": "#d3e4fe", "on-secondary": "#ffffff", "on-surface": "#0b1c30", "primary-container": "#131b2e", "on-primary-fixed": "#131b2e", "surface-container-highest": "#d3e4fe", "on-background": "#0b1c30", "secondary-fixed": "#e1e0ff", "on-tertiary": "#ffffff", "surface-container": "#e5eeff", "on-error": "#ffffff", "surface-dim": "#cbdbf5", "tertiary": "#000000", "surface-container-high": "#dce9ff", "on-primary-fixed-variant": "#3f465c", "primary-fixed-dim": "#bec6e0", "outline-variant": "#c6c6cd", "surface-bright": "#f8f9ff", "inverse-primary": "#bec6e0" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "space-xs": "0.25rem", "gutter": "1rem", "margin": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-xl": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-sm": ["17px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="UniMatch AI Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WRVbUlfBrgdOYOmNUYwfaGjjEbTZ-GBYgbm1GwZdn3u1q7lZd3HQGOdtk9PLOnZmNpJnyu2RpS13yxetcx0Pec-IZhCZ2TTdIsLGTHzRH1sIIqa1TWWTEl4MIcjR9mt_9gJgFHWnJsZ-GW16KH6Q_CxCPuJLbBVPdDOfO64Xphw7-nwVA6K5whsegE5ZmD0WUKih790t81V0SZ4LxiVAclxFMC1Pmom-3ojyF1pUucO_FDmGDYbHGUEnA"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">UniMatch</span><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>AI Active</span></div><span class="font-label-sm text-label-sm text-on-surface-variant line-clamp-1">Matches</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="User Profile" class="relative flex items-center justify-center w-11 h-11 rounded-full hover:bg-surface-container-high transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMD2Ud_uYg4oQrKMaEnxMn8IJCFzBBmJNeL3STXLYnd80wXbupKXGfMS6NKHJ_6a4jujVhhlXxq_eknROLNrAW6A23vHLmjiDXHHEkJZ3Gh9EiaQAJbdW36vpRMo7kNqERjEImdgAVZbg4YCCWmU4fkOe3l0wop5LX2M9CJpMhb8Ta1M8zkiD5hFD34HbCC8hewMZN-1S15f1DBd_bOR98M8MkgJxvmjOOXFfwBkKFc_-h3uHOhQzK"/><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-secondary-container rounded-full ring-2 ring-surface"></span></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full pb-20">
+<!-- Search & Instant Filter Bar -->
+<div class="px-margin pt-space-sm pb-space-xs flex flex-col gap-space-sm">
+<div class="relative flex items-center w-full">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none">search</span>
+<input class="w-full h-12 pl-11 pr-11 bg-surface-container-lowest text-on-surface rounded-full text-body-md font-body-md placeholder-outline shadow-sm focus:outline-none focus:ring-0" placeholder="Search institutions, majors, or cities..." type="text"/>
+<button aria-label="AI Search Filter" class="absolute right-2.5 w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary hover:bg-secondary-fixed-dim transition-colors" title="AI Search Filter">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</button>
+</div>
+<!-- Filter Pills (Horizontal scrollable) -->
+<div class="flex items-center gap-space-xs overflow-x-auto no-scrollbar py-1 -mx-margin px-margin">
+<button class="filter-pill active px-3.5 py-1.5 rounded-full text-label-md font-label-md shrink-0 bg-primary text-on-primary shadow-sm transition-all flex items-center gap-1.5" data-filter="all">
+<span>All Fits</span>
+<span class="w-4 h-4 rounded-full bg-surface-container-lowest/20 text-[10px] flex items-center justify-center">14</span>
+</button>
+<button class="filter-pill px-3.5 py-1.5 rounded-full text-label-md font-label-md shrink-0 bg-surface-container-low text-on-surface hover:bg-surface-container transition-all flex items-center gap-1" data-filter="strong">
+<span class="material-symbols-outlined text-[15px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span>Strong Match (90%+)</span>
+</button>
+<button class="filter-pill px-3.5 py-1.5 rounded-full text-label-md font-label-md shrink-0 bg-surface-container-low text-on-surface hover:bg-surface-container transition-all" data-filter="target">
+        Target
+      </button>
+<button class="filter-pill px-3.5 py-1.5 rounded-full text-label-md font-label-md shrink-0 bg-surface-container-low text-on-surface hover:bg-surface-container transition-all" data-filter="reach">
+        Reach / Ambitious
+      </button>
+<button class="filter-pill px-3.5 py-1.5 rounded-full text-label-md font-label-md shrink-0 bg-surface-container-low text-on-surface hover:bg-surface-container transition-all" data-filter="scholarship">
+        Full Scholarship
+      </button>
+<button class="filter-pill px-3.5 py-1.5 rounded-full text-label-md font-label-md shrink-0 bg-surface-container-low text-on-surface hover:bg-surface-container transition-all" data-filter="budget">
+        Under $25k/yr
+      </button>
+</div>
+</div>
+<!-- AI Personalized Context Banner -->
+<div class="px-margin my-space-sm">
+<div class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary-container via-surface-container-highest to-surface-container-high p-space-md shadow-md text-on-surface">
+<div class="flex items-start gap-space-sm">
+<div class="w-9 h-9 rounded-xl bg-secondary flex items-center justify-center shrink-0 shadow-sm text-on-secondary">
+<span class="material-symbols-outlined text-[20px]">psychology</span>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-1.5 mb-1">
+<span class="font-headline-sm text-headline-sm text-on-surface">Hi Maya</span>
+<span class="inline-flex px-1.5 py-0.5 rounded-md bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">CS &amp; AI Focus</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Based on your high <span class="font-semibold text-on-surface">Analytical Thinking</span> and top-percentile <span class="font-semibold text-on-surface">Math indicators</span>, we curated 14 top-fit universities across UK, US, and Singapore.
+          </p>
+</div>
+</div>
+<!-- Quick AI Diagnostic metrics -->
+<div class="mt-space-sm pt-space-sm flex items-center justify-between gap-space-xs bg-surface-container-lowest/80 backdrop-blur-md rounded-xl p-2.5">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Academic Sync: 94%</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Budget Sync: High</span>
+</div>
+<button class="font-label-sm text-label-sm text-secondary font-bold flex items-center hover:opacity-80 transition-opacity">
+          Breakdown
+          <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Cards Section Header -->
+<div class="px-margin mt-space-sm mb-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface">Curated Recommendations</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant">Top 4</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>Ranked by Fit</span>
+</div>
+</div>
+<!-- Recommendations Stream -->
+<div class="flex flex-col gap-space-md px-margin mt-space-xs">
+<!-- Card 1: NUS -->
+<article class="bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col" data-univ="nus">
+<!-- Image Hero & Match Badge Overlay -->
+<div class="relative w-full h-36 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="National University of Singapore modern glass and tropical architecture campus with lush green gardens under clear bright sunlight, academic aesthetic, photorealistic modern architecture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq_49KYhl1V9H-qTjibYKVRU1JSi1jzmQnsIUeLwcPpEijvBgF3NyjWKFCC2dAnnH3IkY9j1CYwfWp6lF42GyhlrPlkGuEruL15wcs0ZVB2uMzhRm5btdRuHXhnLx79g_RAQ3CpHrlBNh2pcDA4pCHZxylOYWaU4q1VZmk-A_FsVChdt2GxmoPHTpuImf3K5ydlEEwUaP_aCxLDI6MGjqdX513wWl3TlsgZSlD5Woh9Ar1ZzXeFZt6"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<!-- Top Action Row -->
+<div class="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold tracking-wide uppercase">Strong Match</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button aria-label="Save NUS" class="bookmark-btn w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-secondary shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Floating Compare Pill -->
+<label class="absolute bottom-2.5 left-2.5 flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-lowest/95 backdrop-blur-md text-on-surface cursor-pointer shadow-sm select-none">
+<input class="compare-checkbox w-3.5 h-3.5 accent-secondary rounded" data-name="NUS Singapore" onchange="window.handleCompareToggle(this)" type="checkbox"/>
+<span class="font-label-sm text-label-sm font-semibold">Compare</span>
+</label>
+</div>
+<!-- Main Content Block -->
+<div class="p-space-md flex flex-col gap-space-sm">
+<!-- University Identity & Match Score Radial -->
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight truncate">National University of Singapore</h2>
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;" title="Verified Official Institution">verified</span>
+</div>
+<p class="font-body-md text-body-md text-secondary font-semibold mt-0.5">Computer Science &amp; Data Science</p>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md mt-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Queenstown, Singapore</span>
+<span class="mx-1 text-outline-variant">•</span>
+<span class="text-tertiary-fixed-dim font-bold">#8 Global CS</span>
+</div>
+</div>
+<!-- Circular Radial Match Meter (96%) -->
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle cx="24" cy="24" fill="none" r="20" stroke="#10b981" stroke-dasharray="125.6" stroke-dashoffset="5.02" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline-sm text-[15px] font-bold text-on-surface leading-none">96<span class="text-[10px] font-normal">%</span></span>
+<span class="text-[9px] uppercase font-bold text-tertiary-fixed-dim tracking-tight">Sync</span>
+</div>
+</div>
+</div>
+<!-- Financial & Entry Bar -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Est. Net Tuition:</span>
+<span class="font-headline-sm text-[15px] text-on-surface font-bold">$22,400<span class="text-label-sm font-normal text-on-surface-variant"> /yr</span></span>
+</div>
+<div class="flex items-center gap-1.5 text-on-tertiary-container font-label-sm text-label-sm bg-tertiary-fixed/30 px-2 py-0.5 rounded-md self-start">
+<span class="material-symbols-outlined text-[14px]">redeem</span>
+<span>Eligible for ASEAN &amp; MOE Tuition Grant</span>
+</div>
+</div>
+<!-- AI Fit Reasons (Accordion-style high visual delight) -->
+<div class="flex flex-col gap-1.5 bg-surface-container-lowest rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">bolt</span>
+            UniMatch AI Fit Intelligence
+          </span>
+<div class="space-y-1.5">
+<div class="flex items-start gap-2 bg-surface-container-low/70 rounded-lg p-2 text-on-surface">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-sm text-body-sm">Top 10 global CS faculty aligns precisely with your programming strengths &amp; algorithms contest scores.</p>
+</div>
+<div class="flex items-start gap-2 bg-surface-container-low/70 rounded-lg p-2 text-on-surface">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-sm text-body-sm">Exceptional post-grad ROI with English curriculum and immediate employment passes for tech grads.</p>
+</div>
+<div class="flex items-start gap-2 bg-surface-container-low/70 rounded-lg p-2 text-on-surface">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[16px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-sm text-body-sm">Matches your explicit preference for safe, highly connected Asian innovation metropolises.</p>
+</div>
+</div>
+</div>
+<!-- Criteria & Benchmarks -->
+<div class="flex items-center gap-1.5 flex-wrap pt-1">
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">IB 38+ / GPA 3.85+</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">IELTS 6.5+</span>
+<span class="px-2.5 py-1 rounded-md bg-secondary-fixed font-label-sm text-label-sm text-on-secondary-fixed font-semibold">Priority Deadline Dec 15</span>
+</div>
+<!-- CTA Buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-2">
+<button class="h-11 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Full Profile</span>
+</button>
+<a class="h-11 px-3 rounded-xl bg-secondary hover:bg-secondary/90 text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 transition-all shadow-sm" href="https://www.nus.edu.sg/admissions" rel="noopener noreferrer" target="_blank">
+<span>Official Portal</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 2: Imperial College London -->
+<article class="bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col" data-univ="imperial">
+<!-- Image Hero -->
+<div class="relative w-full h-36 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Imperial College London South Kensington campus building with modern architectural steel details and historic Queen's Tower in soft atmospheric daylight, prestigious academic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRoYbHq8JWqfGKhtMHtE6btg0O5vXHkyvePkn7ESvhcqNj_MVSZICgwLSXLW7Q-h1AYwJ37iKyaLg6LhObu37zCUr6PU1ErL61cUr4r2p4lmF-sLOFvei3PvgOP-YFCi02eZedEOHU64OOM_uBzzKFxYOlLRN7t5w0Dr94tZVX0cZKfqMPA31lozfGC9ZHJg8q8eFYMIqhy7fR9NoIDxDarV6bm0VFmXXmkPOhHvrEPFCO9CO5dLIg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<!-- Top Action Row -->
+<div class="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold tracking-wide uppercase">Strong Match</span>
+</div>
+<button aria-label="Save Imperial" class="bookmark-btn w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-secondary shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<!-- Floating Compare Pill -->
+<label class="absolute bottom-2.5 left-2.5 flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-lowest/95 backdrop-blur-md text-on-surface cursor-pointer shadow-sm select-none">
+<input class="compare-checkbox w-3.5 h-3.5 accent-secondary rounded" data-name="Imperial London" onchange="window.handleCompareToggle(this)" type="checkbox"/>
+<span class="font-label-sm text-label-sm font-semibold">Compare</span>
+</label>
+</div>
+<!-- Main Content Block -->
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight truncate">Imperial College London</h2>
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;" title="Verified Official Institution">verified</span>
+</div>
+<p class="font-body-md text-body-md text-secondary font-semibold mt-0.5">Computing (BEng / MEng)</p>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md mt-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>London, United Kingdom</span>
+<span class="mx-1 text-outline-variant">•</span>
+<span class="text-secondary font-bold">#6 Global CS</span>
+</div>
+</div>
+<!-- Circular Radial Match Meter (92%) -->
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle cx="24" cy="24" fill="none" r="20" stroke="#4648d4" stroke-dasharray="125.6" stroke-dashoffset="10.04" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline-sm text-[15px] font-bold text-on-surface leading-none">92<span class="text-[10px] font-normal">%</span></span>
+<span class="text-[9px] uppercase font-bold text-secondary tracking-tight">Sync</span>
+</div>
+</div>
+</div>
+<!-- Financial & Entry Bar -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Est. Net Tuition:</span>
+<span class="font-headline-sm text-[15px] text-on-surface font-bold">£39,100<span class="text-label-sm font-normal text-on-surface-variant"> /yr</span></span>
+</div>
+<div class="flex items-center gap-1.5 text-on-secondary-fixed font-label-sm text-label-sm bg-secondary-fixed/50 px-2 py-0.5 rounded-md self-start">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span>President's Undergraduate Scholarship eligible</span>
+</div>
+</div>
+<!-- AI Fit Reasons -->
+<div class="flex flex-col gap-1.5 bg-surface-container-lowest rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">bolt</span>
+            UniMatch AI Fit Intelligence
+          </span>
+<div class="space-y-1.5">
+<div class="flex items-start gap-2 bg-surface-container-low/70 rounded-lg p-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-sm text-body-sm">Exceptional theoretical &amp; applied computing synergy; rigorous math syllabus matches your profile.</p>
+</div>
+<div class="flex items-start gap-2 bg-surface-container-low/70 rounded-lg p-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-sm text-body-sm">Direct London tech &amp; quant finance ecosystem pipeline with strong summer internship placement.</p>
+</div>
+<div class="flex items-start gap-2 bg-surface-container-low/70 rounded-lg p-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-sm text-body-sm">Strong fit for students with verified interest in independent computational research.</p>
+</div>
+</div>
+</div>
+<!-- Criteria & Benchmarks -->
+<div class="flex items-center gap-1.5 flex-wrap pt-1">
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">A*A*A / AP 5,5,5</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">STEP / TMUA Test</span>
+<span class="px-2.5 py-1 rounded-md bg-surface-container font-label-sm text-label-sm text-on-surface font-medium">UCAS Code: G400</span>
+</div>
+<!-- CTA Buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-2">
+<button class="h-11 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Full Profile</span>
+</button>
+<a class="h-11 px-3 rounded-xl bg-secondary hover:bg-secondary/90 text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 transition-all shadow-sm" href="https://www.imperial.ac.uk/study/ug/courses/computing-department" rel="noopener noreferrer" target="_blank">
+<span>Official Portal</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 3: University of Toronto -->
+<article class="bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col" data-univ="utoronto">
+<!-- Image Hero -->
+<div class="relative w-full h-36 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="University of Toronto St George historic stone campus quad with clock tower and students walking in crisp autumnal light, dignified academic beauty." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxUN9ambBOKs5qyOePq9Xu_TILuTSnUcPS2nm8kTGo_paMdscF7aNPW6i9EEJ-So-UESpEWZ4dC_QRJXyyfBXiHm4h80SQQ9GRMOYfrIbCl1fQGgoOln0y6bQevvd0AJQJuMK68JJPq9pFloewtLuaEcx5xj1R4Ecktv8DvBsljgICzFPeI5Wl3FIFYEYocuIpiDOB9pMUF9uspd2XiDYf4JVhvMIZcT7SfwukD1Sr1jRtZZiA6yLu"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<div class="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-lowest/90 backdrop-blur-md shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold tracking-wide uppercase">Good Match</span>
+</div>
+<button aria-label="Save Toronto" class="bookmark-btn w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-secondary shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<label class="absolute bottom-2.5 left-2.5 flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-lowest/95 backdrop-blur-md text-on-surface cursor-pointer shadow-sm select-none">
+<input class="compare-checkbox w-3.5 h-3.5 accent-secondary rounded" data-name="Univ of Toronto" onchange="window.handleCompareToggle(this)" type="checkbox"/>
+<span class="font-label-sm text-label-sm font-semibold">Compare</span>
+</label>
+</div>
+<!-- Main Content Block -->
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight truncate">University of Toronto</h2>
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-md text-body-md text-secondary font-semibold mt-0.5">Faculty of Arts &amp; Science (CS)</p>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md mt-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Toronto, Canada</span>
+<span class="mx-1 text-outline-variant">•</span>
+<span class="text-on-surface-variant font-medium">St. George Campus</span>
+</div>
+</div>
+<!-- Circular Radial Match Meter (88%) -->
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle cx="24" cy="24" fill="none" r="20" stroke="#6063ee" stroke-dasharray="125.6" stroke-dashoffset="15.07" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline-sm text-[15px] font-bold text-on-surface leading-none">88<span class="text-[10px] font-normal">%</span></span>
+<span class="text-[9px] uppercase font-bold text-secondary-container tracking-tight">Sync</span>
+</div>
+</div>
+</div>
+<!-- Financial & Entry Bar -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Est. Net Tuition:</span>
+<span class="font-headline-sm text-[15px] text-on-surface font-bold">CAD $60,500<span class="text-label-sm font-normal text-on-surface-variant"> /yr</span></span>
+</div>
+<div class="flex items-center gap-1.5 text-on-secondary-fixed font-label-sm text-label-sm bg-secondary-fixed/50 px-2 py-0.5 rounded-md self-start">
+<span class="material-symbols-outlined text-[14px]">workspace_premium</span>
+<span>Lester B. Pearson Scholarship available</span>
+</div>
+</div>
+<!-- AI Fit Reasons -->
+<div class="flex flex-col gap-1.5 bg-surface-container-lowest rounded-xl">
+<span class="font-label-sm text-label-sm text-on-surface font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-secondary text-[14px]">bolt</span>
+            UniMatch AI Fit Intelligence
+          </span>
+<div class="space-y-1.5">
+<div class="flex items-start gap-2 bg-surface-container-low/70 rounded-lg p-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary-container text-[16px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-sm text-body-sm">Renowned Vector Institute affiliations offering rare undergrad machine learning access.</p>
+</div>
+<div class="flex items-start gap-2 bg-surface-container-low/70 rounded-lg p-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary-container text-[16px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-sm text-body-sm">Flexible major declaration stream in Year 2 matches your broad interdisciplinary curiosity.</p>
+</div>
+<div class="flex items-start gap-2 bg-surface-container-low/70 rounded-lg p-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary-container text-[16px] mt-0.5 shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="font-body-sm text-body-sm">Extremely safe, multicultural city with clear post-graduation Canadian work permit pathways.</p>
+</div>
+</div>
+</div>
+<!-- CTA Buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-2">
+<button class="h-11 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Full Profile</span>
+</button>
+<a class="h-11 px-3 rounded-xl bg-secondary hover:bg-secondary/90 text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 transition-all shadow-sm" href="https://future.utoronto.ca" rel="noopener noreferrer" target="_blank">
+<span>Official Portal</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</article>
+<!-- Card 4: Georgia Tech -->
+<article class="bg-surface-container-lowest rounded-2xl shadow-sm hover:shadow-md transition-shadow overflow-hidden flex flex-col" data-univ="gatech">
+<!-- Image Hero -->
+<div class="relative w-full h-36 bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Georgia Tech College of Computing Klaus Advanced Computing Building glass facade with tech students collaborating on sunny day, vibrant collegiate engineering setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVZNp2jXnSHzFwL08MjiSacPgegVyggRYgrcdkawfaEKNzZgy-Kr_yBLCLA5PFbySFdsmQarwjnFjv5cY5OV7QTCbBVpZuGY9O4N9V1Ntn374UzmJO-KmKSKxT3ppUWe6zFLbZ4v3FecYQY-V6oHNPv77xwpfHVBO0oX44uqdcu3JjXYd--0YFcYXKAfrFvVV1N2L7nvtLMBBMD_mBevA8uRyfEL53CRMkSYeK8GpI59w4AiE7Cdab"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-transparent"></div>
+<div class="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-100 text-amber-900 backdrop-blur-md shadow-sm">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span class="font-label-sm text-label-sm font-bold tracking-wide uppercase">Ambitious Option</span>
+</div>
+<button aria-label="Save Georgia Tech" class="bookmark-btn w-8 h-8 rounded-full bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-secondary shadow-sm transition-colors">
+<span class="material-symbols-outlined text-[18px]">bookmark</span>
+</button>
+</div>
+<label class="absolute bottom-2.5 left-2.5 flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-lowest/95 backdrop-blur-md text-on-surface cursor-pointer shadow-sm select-none">
+<input class="compare-checkbox w-3.5 h-3.5 accent-secondary rounded" data-name="Georgia Tech" onchange="window.handleCompareToggle(this)" type="checkbox"/>
+<span class="font-label-sm text-label-sm font-semibold">Compare</span>
+</label>
+</div>
+<!-- Main Content Block -->
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold leading-tight truncate">Georgia Institute of Technology</h2>
+<span class="material-symbols-outlined text-secondary text-[16px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+<p class="font-body-md text-body-md text-secondary font-semibold mt-0.5">College of Computing</p>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-md text-label-md mt-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Atlanta, GA, USA</span>
+<span class="mx-1 text-outline-variant">•</span>
+<span class="text-amber-700 font-bold">13% Out-of-state Accept</span>
+</div>
+</div>
+<!-- Circular Radial Match Meter (82%) -->
+<div class="relative w-14 h-14 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle cx="24" cy="24" fill="none" r="20" stroke="#f59e0b" stroke-dasharray="125.6" stroke-dashoffset="22.6" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-headline-sm text-[15px] font-bold text-on-surface leading-none">82<span class="text-[10px] font-normal">%</span></span>
+<span class="text-[9px] uppercase font-bold text-amber-600 tracking-tight">Sync</span>
+</div>
+</div>
+</div>
+<!-- Financial & Entry Bar -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Est. Net Tuition:</span>
+<span class="font-headline-sm text-[15px] text-on-surface font-bold">$33,800<span class="text-label-sm font-normal text-on-surface-variant"> /yr</span></span>
+</div>
+</div>
+<!-- Transparent AI Reality Note -->
+<div class="bg-amber-50 rounded-xl p-space-sm flex items-start gap-2 text-amber-900">
+<span class="material-symbols-outlined text-amber-600 text-[18px] shrink-0 mt-0.5">info</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold uppercase tracking-tight text-amber-800">AI Admissions Reality Check</span>
+<p class="font-body-sm text-body-sm mt-0.5 text-amber-950">High competition pool for international/out-of-state CS. A submitted SAT Math score of 780+ or targeted honors project strongly increases acceptance probability.</p>
+</div>
+</div>
+<!-- CTA Buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-2">
+<button class="h-11 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>View Full Profile</span>
+</button>
+<a class="h-11 px-3 rounded-xl bg-secondary hover:bg-secondary/90 text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 transition-all shadow-sm" href="https://admission.gatech.edu" rel="noopener noreferrer" target="_blank">
+<span>Official Portal</span>
+<span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</div>
+</div>
+</article>
+</div>
+<!-- Floating Comparison Dock -->
+<div class="fixed bottom-20 left-4 right-4 z-40 transition-all duration-300 transform translate-y-24 opacity-0 pointer-events-none" id="comparison-dock">
+<div class="bg-primary text-on-primary rounded-2xl shadow-xl p-3 px-4 flex items-center justify-between backdrop-blur-lg">
+<div class="flex items-center gap-2.5">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary shrink-0 font-label-sm font-bold" id="compare-count-badge">
+          0
+        </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-bold leading-none" id="compare-dock-title">Universities Selected</span>
+<span class="text-[11px] text-surface-container-highest mt-0.5 truncate max-w-[170px]" id="compare-names">Select 2 to evaluate</span>
+</div>
+</div>
+<button class="h-9 px-4 rounded-xl bg-secondary hover:bg-secondary-container text-on-secondary font-label-md text-label-md font-bold flex items-center gap-1.5 transition-colors shadow-sm" onclick="window.triggerCompareModal()">
+<span>Compare Now</span>
+<span class="material-symbols-outlined text-[16px]">compare_arrows</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // Simple state management for Compare dock & interactive filters
+  (function initUniMatchInteractions() {
+    window.selectedForCompare = [];
+
+    window.handleCompareToggle = function(checkbox) {
+      const name = checkbox.getAttribute('data-name');
+      if (checkbox.checked) {
+        if (window.selectedForCompare.length >= 3) {
+          checkbox.checked = false;
+          alert('You can compare up to 3 universities at once.');
+          return;
+        }
+        window.selectedForCompare.push(name);
+      } else {
+        window.selectedForCompare = window.selectedForCompare.filter(item => item !== name);
+      }
+      updateCompareDock();
+    };
+
+    function updateCompareDock() {
+      const dock = document.getElementById('comparison-dock');
+      const countBadge = document.getElementById('compare-count-badge');
+      const namesLabel = document.getElementById('compare-names');
+
+      if (!dock || !countBadge || !namesLabel) return;
+
+      const count = window.selectedForCompare.length;
+      countBadge.textContent = count;
+
+      if (count > 0) {
+        dock.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+        namesLabel.textContent = window.selectedForCompare.join(', ');
+      } else {
+        dock.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+      }
+    }
+
+    window.triggerCompareModal = function() {
+      if (window.selectedForCompare.length < 2) {
+        alert('Please select at least 2 universities to see a side-by-side comparison.');
+        return;
+      }
+      alert('Generating AI Comparison matrix for: ' + window.selectedForCompare.join(' vs '));
+    };
+
+    // Filter pill toggles
+    const pills = document.querySelectorAll('.filter-pill');
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        pills.forEach(p => {
+          p.classList.remove('bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container-low', 'text-on-surface');
+        });
+        pill.classList.remove('bg-surface-container-low', 'text-on-surface');
+        pill.classList.add('bg-primary', 'text-on-primary');
+      });
+    });
+
+    // Bookmark toggles
+    const bookmarks = document.querySelectorAll('.bookmark-btn');
+    bookmarks.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (icon) {
+          const isFilled = icon.style.fontVariationSettings?.includes("'FILL' 1");
+          icon.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+          btn.classList.toggle('text-secondary', !isFilled);
+        }
+      });
+    });
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-8px_24px_-4px_rgba(15,23,42,0.06)]" data-active-classes="text-secondary font-label-md"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-full gap-space-xs transition-colors text-secondary font-label-md" data-path="matches" href="#"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="font-label-sm text-label-sm">Matches</span></a><a class="flex flex-col items-center justify-center flex-1 h-full gap-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="strengths-and-profile" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm">Profile</span></a><a class="flex flex-col items-center justify-center flex-1 h-full gap-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="counselor-chat" href="#"><span class="material-symbols-outlined text-[22px]">smart_toy</span><span class="font-label-sm text-label-sm">Counselor</span></a><a class="flex flex-col items-center justify-center flex-1 h-full gap-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="essay-studio" href="#"><span class="material-symbols-outlined text-[22px]">edit_document</span><span class="font-label-sm text-label-sm">Essays</span></a><a class="flex flex-col items-center justify-center flex-1 h-full gap-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="shortlist-and-tracker" href="#"><span class="material-symbols-outlined text-[22px]">checklist</span><span class="font-label-sm text-label-sm">Shortlist</span></a></div></nav></body></html>

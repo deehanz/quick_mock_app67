@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline": "#76777d", "on-surface-variant": "#45464d", "on-primary-container": "#7c839b", "primary-fixed": "#dae2fd", "on-tertiary-fixed-variant": "#005236", "on-secondary-container": "#fffbff", "on-secondary-fixed-variant": "#2f2ebe", "on-error-container": "#93000a", "tertiary-fixed-dim": "#4edea3", "background": "#f8f9ff", "surface-container-lowest": "#ffffff", "surface-container-low": "#eff4ff", "surface": "#f8f9ff", "secondary": "#4648d4", "surface-tint": "#565e74", "secondary-fixed-dim": "#c0c1ff", "inverse-surface": "#213145", "error": "#ba1a1a", "inverse-on-surface": "#eaf1ff", "error-container": "#ffdad6", "on-tertiary-fixed": "#002113", "on-secondary-fixed": "#07006c", "primary": "#000000", "tertiary-container": "#002113", "secondary-container": "#6063ee", "tertiary-fixed": "#6ffbbe", "on-tertiary-container": "#009668", "on-primary": "#ffffff", "surface-variant": "#d3e4fe", "on-secondary": "#ffffff", "on-surface": "#0b1c30", "primary-container": "#131b2e", "on-primary-fixed": "#131b2e", "surface-container-highest": "#d3e4fe", "on-background": "#0b1c30", "secondary-fixed": "#e1e0ff", "on-tertiary": "#ffffff", "surface-container": "#e5eeff", "on-error": "#ffffff", "surface-dim": "#cbdbf5", "tertiary": "#000000", "surface-container-high": "#dce9ff", "on-primary-fixed-variant": "#3f465c", "primary-fixed-dim": "#bec6e0", "outline-variant": "#c6c6cd", "surface-bright": "#f8f9ff", "inverse-primary": "#bec6e0" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2rem", "space-xs": "0.25rem", "gutter": "1rem", "margin": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem" }, "fontFamily": { "headline-xl": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "headline-xl": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.03em", "fontWeight": "700" }], "headline-lg-mobile": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "400" }], "headline-sm": ["17px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.025em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "26px", "letterSpacing": "-0.015em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "18px", "letterSpacing": "0.005em", "fontWeight": "400" }], "headline-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="UniMatch AI Brand Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WRVbUlfBrgdOYOmNUYwfaGjjEbTZ-GBYgbm1GwZdn3u1q7lZd3HQGOdtk9PLOnZmNpJnyu2RpS13yxetcx0Pec-IZhCZ2TTdIsLGTHzRH1sIIqa1TWWTEl4MIcjR9mt_9gJgFHWnJsZ-GW16KH6Q_CxCPuJLbBVPdDOfO64Xphw7-nwVA6K5whsegE5ZmD0WUKih790t81V0SZ4LxiVAclxFMC1Pmom-3ojyF1pUucO_FDmGDYbHGUEnA"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">UniMatch</span><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>AI Active</span></div><span class="font-label-sm text-label-sm text-on-surface-variant line-clamp-1">Essay Studio</span></div></div><div class="flex items-center gap-space-sm"><button aria-label="User Profile" class="relative flex items-center justify-center w-11 h-11 rounded-full hover:bg-surface-container-high transition-colors"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMD2Ud_uYg4oQrKMaEnxMn8IJCFzBBmJNeL3STXLYnd80wXbupKXGfMS6NKHJ_6a4jujVhhlXxq_eknROLNrAW6A23vHLmjiDXHHEkJZ3Gh9EiaQAJbdW36vpRMo7kNqERjEImdgAVZbg4YCCWmU4fkOe3l0wop5LX2M9CJpMhb8Ta1M8zkiD5hFD34HbCC8hewMZN-1S15f1DBd_bOR98M8MkgJxvmjOOXFfwBkKFc_-h3uHOhQzK"/><span class="absolute top-1.5 right-1.5 w-2.5 h-2.5 bg-secondary-container rounded-full ring-2 ring-surface"></span></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Canvas Root -->
+<div class="px-margin flex flex-col gap-space-lg w-full max-w-xl mx-auto pb-space-xl">
+<!-- Studio Header & University Linker -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<!-- Target University Dropdown / Pill selector -->
+<div class="flex items-center justify-between bg-surface-container-low rounded-xl p-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center shrink-0 text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Target Application</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface truncate">Imperial College London</span>
+<span class="material-symbols-outlined text-outline text-[18px] shrink-0">expand_more</span>
+</div>
+</div>
+</div>
+<div class="shrink-0 flex items-center">
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm px-2.5 py-1 rounded-full">UCAS 2025</span>
+</div>
+</div>
+<!-- Essay Type Selector Horizontal Scroll -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-1 no-scrollbar">
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-sm transition-transform active:scale-95 flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span>Personal Statement</span>
+</button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-highest transition-colors">
+          Scholarship Essay
+        </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-highest transition-colors">
+          Diversity / Challenges
+        </button>
+<button class="shrink-0 px-3.5 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md hover:bg-surface-container-highest transition-colors">
+          Why This Major
+        </button>
+</div>
+</div>
+<!-- Active Essay Editor Workspace Card -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm gap-space-md relative">
+<!-- Essay Title Field -->
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Draft Title</span>
+<div class="flex items-center gap-1 text-on-tertiary-container bg-tertiary-fixed/30 px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-sm text-label-sm font-semibold">Auto-saved 2m ago</span>
+</div>
+</div>
+<input class="font-headline-md text-headline-md text-on-surface bg-transparent focus:outline-none w-full pb-1 border-b-0 placeholder:text-outline-variant" placeholder="Untitled Personal Statement" type="text" value="From Circuits to Communities: Why Computing Inspires Me"/>
+</div>
+<!-- Word Count & Progress Ring / Bar Combo -->
+<div class="flex flex-col gap-1.5 bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[16px]">edit_note</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold">685 / 750 words</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container bg-tertiary-fixed/40 px-1.5 py-0.5 rounded text-[10px]">Optimal Range</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">91% filled</span>
+</div>
+<!-- Progress track -->
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden flex">
+<div class="bg-secondary h-full rounded-full transition-all duration-500" style="width: 91.3%;"></div>
+</div>
+</div>
+<!-- Rich Annotated Editor View -->
+<div class="flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Editor &amp; AI Annotations</span>
+<div class="flex items-center gap-3">
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span> Suggestion
+            </span>
+<span class="flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed-dim"></span> High Impact
+            </span>
+</div>
+</div>
+<!-- Simulated Rich Editor Workspace -->
+<div class="font-body-md text-body-md text-on-surface leading-relaxed flex flex-col gap-space-sm bg-surface-bright p-space-sm rounded-lg">
+<p>
+            At 2:00 AM on the eve of the regional VEX Robotics final, our autonomous navigation sequence suffered a catastrophic heap overflow. <span class="bg-secondary-fixed/50 text-on-secondary-fixed font-medium px-1 py-0.5 rounded cursor-pointer transition-colors hover:bg-secondary-fixed" title="AI Voice: Highly vivid sensory opening">While my team considered reverting to manual override, I isolated the corrupted pointer in our sensory loop</span>, realizing our odometry readings had saturated the microcontroller’s buffer. That midnight epiphany wasn’t merely about resolving a memory leak; it revealed the breathtaking symmetry between logical elegance and physical motion.
+          </p>
+<p>
+<span class="bg-tertiary-fixed/60 text-on-tertiary-fixed font-medium px-1 py-0.5 rounded" title="AI Impact: Shows deep academic resilience">Through two years of mentoring junior coders across inner-city schools, I saw firsthand that access to computational thinking transforms confidence.</span> However, I realized foundational theory must meet scalable systems.
+          </p>
+<p>
+<span class="bg-secondary-fixed/60 text-on-secondary-fixed border-b border-secondary font-medium px-1 py-0.5 rounded cursor-pointer" title="AI Suggestion: Paragraph 3 needs stronger tie-in to Imperial faculty">My interest in concurrent algorithmic architecture drives my goal to study Computing at Imperial.</span> <span class="bg-secondary-fixed/40 text-on-surface font-normal px-1 py-0.5 rounded cursor-pointer" title="AI Suggestion: Replace 'I learned a lot' with measurable workshop outcomes">In our robotics society, I learned a lot</span> about directing twenty peers under tight development cycles.
+          </p>
+</div>
+<!-- Privacy & Security Guarantee Banner -->
+<div class="flex items-center gap-space-sm bg-surface-container-high/60 px-3 py-2.5 rounded-lg mt-1">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0" style="font-variation-settings: 'FILL' 1;">shield</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant leading-tight">
+<strong class="font-semibold text-on-surface">100% Private &amp; Confidential:</strong> Essays are stored in your encrypted vault and never used to train public models or submitted automatically.
+          </span>
+</div>
+</div>
+</div>
+<!-- AI Real-Time Feedback Diagnostic Panel -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl p-space-md shadow-sm gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Admissions Intelligence</h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Holistic UCAS Rubric Analysis</span>
+</div>
+</div>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+          Strong Tier
+        </span>
+</div>
+<!-- Metric Rings / Stat Grid -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<!-- Radial Progress Ring Mini SVG -->
+<div class="relative w-12 h-12 shrink-0 flex items-center justify-center">
+<svg class="w-12 h-12 transform -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-highest" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-on-tertiary-container" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="2.5" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<span class="absolute font-label-md text-label-md font-bold text-on-surface">98</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Grammar &amp; Polish</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">98/100</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm bg-surface-container-low rounded-lg">
+<div class="relative w-12 h-12 shrink-0 flex items-center justify-center">
+<svg class="w-12 h-12 transform -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-highest" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-secondary" cx="24" cy="24" fill="transparent" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="15" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<span class="absolute font-label-md text-label-md font-bold text-on-surface">92</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Personal Voice</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Authentic</span>
+</div>
+</div>
+</div>
+<!-- Authenticity Commentary -->
+<div class="bg-surface-container-high/40 rounded-lg p-space-sm flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">forum</span>
+<span class="font-label-md text-label-md font-semibold">Narrative Voice Assessment</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface leading-normal">
+          “Strong personal narrative. Your opening about debugging your high school robotics tournament code feels genuine and grounded rather than theatrical.”
+        </p>
+</div>
+<!-- Core Strengths Identified -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">Standout Strengths</span>
+<div class="flex flex-wrap gap-1.5">
+<div class="inline-flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded-full text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-on-tertiary-container text-[14px]">check_circle</span>
+            Analytical Rigor
+          </div>
+<div class="inline-flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded-full text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-on-tertiary-container text-[14px]">check_circle</span>
+            Resilience through Failure
+          </div>
+<div class="inline-flex items-center gap-1 bg-surface-container-high px-2.5 py-1 rounded-full text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-on-tertiary-container text-[14px]">check_circle</span>
+            Community Mentorship
+          </div>
+</div>
+</div>
+<!-- High-Priority Actionable Suggestions -->
+<div class="flex flex-col gap-space-sm">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider">High-Impact Refinements (2)</span>
+<!-- Suggestion Card 1 -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1.5 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">lightbulb</span>
+              Paragraph 3 • Target College Alignment
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">+4% Match</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            Connect your algorithmic interest more explicitly to <strong class="font-semibold text-secondary">Imperial's DoC Computing Society</strong> and specific labs (e.g. <span class="font-semibold text-on-surface">Imperial Data Science Institute</span>).
+          </p>
+<div class="flex justify-end pt-1">
+<button class="bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">add_link</span>
+              Insert Imperial Citation
+            </button>
+</div>
+</div>
+<!-- Suggestion Card 2 -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-1.5 relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-error flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+              Paragraph 4 • Show, Don't Tell
+            </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Clarity</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            Replace passive phrasing <em class="text-on-surface-variant font-serif">“I learned a lot”</em> with specific metrics from the workshop you organized (e.g., number of students mentored, completion rate).
+          </p>
+<div class="flex justify-end pt-1">
+<button class="bg-surface-container-highest hover:bg-surface-variant text-on-surface font-label-sm text-label-sm px-2.5 py-1 rounded transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">auto_fix_high</span>
+              Review Contextual Rewrite
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Studio Control Actions -->
+<div class="flex flex-col gap-space-sm">
+<!-- Primary AI Actions Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<!-- AI Critique Button -->
+<button class="flex items-center justify-center gap-2 h-12 rounded-xl bg-surface-container-high text-on-surface font-label-lg text-label-lg shadow-sm hover:bg-surface-container-highest transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-secondary text-[20px]">psychology_alt</span>
+<span>AI Critique (No Rewrite)</span>
+</button>
+<!-- Improve Draft Button -->
+<button class="flex items-center justify-center gap-2 h-12 rounded-xl bg-secondary text-on-secondary font-label-lg text-label-lg shadow-md hover:bg-secondary-container transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-[20px]">auto_fix_high</span>
+<span>Improve Draft (Preserve Voice)</span>
+</button>
+</div>
+<!-- Secondary Utility Row -->
+<div class="flex items-center justify-between pt-1 px-1">
+<button class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2">
+<span class="material-symbols-outlined text-[18px]">bookmark_border</span>
+<span>Save Draft</span>
+</button>
+<div class="flex items-center gap-space-md">
+<button class="flex items-center gap-1.5 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors py-2">
+<span class="material-symbols-outlined text-[18px]">ios_share</span>
+<span>Export PDF/Doc</span>
+</button>
+<button aria-label="Delete Draft" class="flex items-center gap-1.5 font-label-md text-label-md text-error hover:text-on-error-container transition-colors py-2">
+<span class="material-symbols-outlined text-[18px]">delete_outline</span>
+<span>Delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-8px_24px_-4px_rgba(15,23,42,0.06)]" data-active-classes="text-secondary font-label-md"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center flex-1 h-full gap-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="matches" href="#"><span class="material-symbols-outlined text-[22px]">auto_awesome</span><span class="font-label-sm text-label-sm">Matches</span></a><a class="flex flex-col items-center justify-center flex-1 h-full gap-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="strengths-and-profile" href="#"><span class="material-symbols-outlined text-[22px]">psychology</span><span class="font-label-sm text-label-sm">Profile</span></a><a class="flex flex-col items-center justify-center flex-1 h-full gap-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="counselor-chat" href="#"><span class="material-symbols-outlined text-[22px]">smart_toy</span><span class="font-label-sm text-label-sm">Counselor</span></a><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-full gap-space-xs transition-colors text-secondary font-label-md" data-path="essay-studio" href="#"><span class="material-symbols-outlined text-[22px]">edit_document</span><span class="font-label-sm text-label-sm">Essays</span></a><a class="flex flex-col items-center justify-center flex-1 h-full gap-space-xs text-on-surface-variant transition-colors hover:text-on-surface" data-path="shortlist-and-tracker" href="#"><span class="material-symbols-outlined text-[22px]">checklist</span><span class="font-label-sm text-label-sm">Shortlist</span></a></div></nav></body></html>
